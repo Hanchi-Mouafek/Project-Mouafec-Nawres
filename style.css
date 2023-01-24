@@ -16,6 +16,9 @@
 body{
     color: var(--text-color);
 }
+img{
+    width: auto;
+}
 #nawres{
     font-family:arial black;
     font-size:1.5rem;
@@ -65,12 +68,16 @@ header{
 .cart{
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     width: 360px;
     min-height: 100vh;
     padding: 20px;
     background: var(--bg-color);
     box-shadow: -2px 0 4px hsl(0 4% 15% /10%);
+    transition: 0.3s;
+}
+.cart.active{
+    right:0;
 }
 .cart-img{
     width: 100px;
@@ -83,7 +90,7 @@ header{
     row-gap: 0.5rem;
 }
 .cart-product-title{
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-transform: uppercase;
 }
 .cart-title{
@@ -182,7 +189,7 @@ header{
     text-transform: uppercase;
     margin-bottom: 0.5rem;
 }
-.add-cart{
+.add-cart{ 
     position: absolute;
     bottom: 0;
     right: 0;
@@ -192,6 +199,9 @@ header{
     cursor: pointer;
 }
 .add-cart:hover{
-
+    padding: 15px;
+    border: 1px solid var(--text-color);
+    transition: 0.1s;
+    background: var(--main-color);
 }
 
